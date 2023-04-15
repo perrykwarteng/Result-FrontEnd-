@@ -118,6 +118,18 @@ h6 {
   color: #012970;
 }
 
+.header .semester h3,
+.header .year h3 {
+  font-size: 1rem;
+  margin: 0rem 0rem 0rem 2rem;
+  color: #012970;
+}
+.header .semester span,
+.header .year span {
+  color: #4154f1;
+  margin-left: 0.2rem;
+}
+
 @media (max-width: 1199px) {
   .header .search-bar {
     position: fixed;
@@ -137,6 +149,10 @@ h6 {
     top: 60px;
     visibility: visible;
     opacity: 1;
+  }
+  .header .semester,
+  .header .year {
+    display: none;
   }
 }
 
