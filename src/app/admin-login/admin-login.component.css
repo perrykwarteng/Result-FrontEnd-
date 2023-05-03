@@ -1,3 +1,7 @@
 main {
   background: #cfe2ff;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
