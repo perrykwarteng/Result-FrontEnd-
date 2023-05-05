@@ -5,16 +5,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
-import { DashboardInterfaceComponent } from './Admin/dashboard-interface/dashboard-interface.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AdminDashboardComponent,
-    DashboardInterfaceComponent,
-    AdminLoginComponent,
-  ],
+  declarations: [AppComponent, AdminDashboardComponent, AdminLoginComponent],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
