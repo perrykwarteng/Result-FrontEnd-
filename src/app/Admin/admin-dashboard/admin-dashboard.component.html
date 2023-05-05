@@ -31,7 +31,7 @@
 <aside id="sidebar" class="sidebar navbar-collapse" *ngIf="!isDispaly">
   <ul class="sidebar-nav" id="sidebar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="index.html">
+      <a routerLink="/admin" class="nav-link">
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
       </a>
@@ -44,14 +44,14 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#">
+      <a routerLink="/manageTeachers" class="nav-link collapsed">
         <i class="bi bi-card-list"></i>
         <span>Manage Teachers</span>
       </a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#">
+      <a routerLink="/manageStudents" class="nav-link collapsed">
         <i class="bi bi-person-circle"></i>
         <span>Manage Students</span>
       </a>
