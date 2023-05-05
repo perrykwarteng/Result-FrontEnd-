@@ -368,13 +368,3 @@ h6 {
 .sidebar-nav .nav-content a.active i {
   background-color: #4154f1;
 }
-
-/* Main */
-.main {
-  position: relative;
-  top: 20px;
-  width: 50%;
-}
-.main .pagetitle {
-  color: #012970;
-}

@@ -1,0 +1,18 @@
+/* Main */
+.main {
+    position: relative;
+    top: 20px;
+    width: 50%;
+    left: 23%;
+  }
+  .main .pagetitle {
+    color: #012970;
+  }
+  
+  @media (min-width: 800px) {
+    .main {
+      width: 75%;
+      margin: 4rem 1rem;
+      left: 23%;
+    }
+  }
