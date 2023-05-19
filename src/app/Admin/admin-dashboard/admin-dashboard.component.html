@@ -1,7 +1,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
   <div class="d-flex align-items-center justify-content-between">
     <a href="index.html" class="logo d-flex align-items-center">
-      <img src="assets/img/logo.png" alt="" />
+      <img src="../../../assets/schlogo.jpeg" alt="" />
       <span class="d-none d-lg-block">Result App</span>
     </a>
     <i class="bi bi-list toggle-sidebar-btn" (click)="toggle()"></i>
@@ -22,13 +22,12 @@
   </div>
 
   <div class="profile">
-    <img src="" alt="profile" />
     <h3>John welcome</h3>
   </div>
 </header>
 
 <!-- sidebar -->
-<aside id="sidebar" class="sidebar " *ngIf="!isDispaly">
+<aside id="sidebar" class="sidebar" *ngIf="!isDispaly">
   <ul class="sidebar-nav" id="sidebar-nav">
     <li class="nav-item">
       <a routerLink="/admin" class="nav-link">
@@ -52,30 +51,37 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#">
+      <a routerLink="/manageSubjects" class="nav-link collapsed">
         <i class="bi bi-journals"></i>
         <span>Manage Subjects</span>
       </a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#">
-        <i class="bi bi-person"></i>
+      <a routerLink="/results" class="nav-link collapsed">
+        <i class="bi bi-envelope-paper"></i>
+        <span>Results</span>
+      </a>
+    </li>
+
+    <!-- <li class="nav-item">
+      <a routerLink="/gradeScale" class="nav-link collapsed">
+        <i class="bi bi-escape"></i>
         <span>Grade Scale</span>
       </a>
-    </li>
+    </li> -->
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#">
-        <i class="bi bi-person"></i>
-        <span>Profile</span>
+      <a routerLink="/settings" class="nav-link collapsed">
+        <i class="bi bi-gear"></i>
+        <span>Settings</span>
       </a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#">
-        <i class="bi bi-gear"></i>
-        <span>Settings</span>
+      <a routerLink="/settings" class="nav-link collapsed">
+        <i class="bi bi-box-arrow-left"></i>
+        <span>Logout</span>
       </a>
     </li>
   </ul>
@@ -142,7 +148,7 @@
         <div class="class-card cards">
           <div class="card-body">
             <div class="card-title">
-              <h5>Classes</h5>
+              <h5>Results</h5>
               <p>23 <span>Available</span></p>
             </div>
             <div class="card-icon">

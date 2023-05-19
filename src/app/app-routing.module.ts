@@ -4,6 +4,10 @@ import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ManageTeachersComponent } from './Admin/pages/manage-teachers/manage-teachers.component';
 import { ManageStudentsComponent } from './Admin/pages/manage-students/manage-students.component';
+import { ManageSubjectsComponent } from './Admin/pages/manage-subjects/manage-subjects.component';
+import { ResultsComponent } from './Admin/pages/results/results.component';
+import { ErrorComponent } from './error/error.component';
+import { SettingsComponent } from './Admin/pages/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -21,6 +25,22 @@ const routes: Routes = [
   {
     path: 'manageStudents',
     component: ManageStudentsComponent,
+  },
+  {
+    path: 'manageSubjects',
+    component: ManageSubjectsComponent,
+  },
+  {
+    path: 'results',
+    component: ResultsComponent,
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent,
+  },
+  {
+    path: '**',
+    component: ErrorComponent,
   },
 ];
 

@@ -10,6 +10,10 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ManageTeachersComponent } from './Admin/pages/manage-teachers/manage-teachers.component';
 import { ManageStudentsComponent } from './Admin/pages/manage-students/manage-students.component';
 import { AdminTempalateComponent } from './Admin/admin-tempalate/admin-tempalate.component';
+import { ManageSubjectsComponent } from './Admin/pages/manage-subjects/manage-subjects.component';
+import { ResultsComponent } from './Admin/pages/results/results.component';
+import { SettingsComponent } from './Admin/pages/settings/settings.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { AdminTempalateComponent } from './Admin/admin-tempalate/admin-tempalate
     ManageTeachersComponent,
     ManageStudentsComponent,
     AdminTempalateComponent,
+    ManageSubjectsComponent,
+    ResultsComponent,
+    SettingsComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
