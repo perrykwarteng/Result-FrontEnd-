@@ -49,6 +49,7 @@
           <thead>
             <tr>
               <th scope="col">#</th>
+              <th scope="col">Index Number</th>
               <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Number</th>
@@ -58,25 +59,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>John kofi Owusu</td>
-              <td>john@gmail.com</td>
-              <td>0243425687</td>
-              <td>27th/06/2023</td>
-              <td>Location</td>
+            <tr *ngFor="let datas of data; let i = index">
+              <th scope="row">{{ i }}</th>
+              <td>{{ datas.t_index }}</td>
               <td>
-                <i class="bi bi-pencil-square"></i>
-                <i class="bi bi-trash"></i>
+                {{ datas.first_name + datas.other_name + datas.last_name }}
               </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>John kofi Owusu</td>
-              <td>john@gmail.com</td>
-              <td>0243425687</td>
-              <td>27th/06/2023</td>
-              <td>Location</td>
+              <td>{{ datas.email }}</td>
+              <td>{{ datas.number }}</td>
+              <td>{{ datas.data | date }}</td>
+              <td>{{ datas.location }}</td>
               <td>
                 <i class="bi bi-pencil-square"></i>
                 <i class="bi bi-trash"></i>

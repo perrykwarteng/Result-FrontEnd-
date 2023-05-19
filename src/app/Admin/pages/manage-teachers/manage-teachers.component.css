@@ -39,4 +39,13 @@
 }
 .display .card table {
   color: #012970;
+  text-align: center;
+}
+
+.display .bi-pencil-square {
+  color: #0762ff;
+}
+.display .bi-trash {
+  color: #ff0707;
+  margin: 0rem 0rem 0rem 0.5rem;
 }
