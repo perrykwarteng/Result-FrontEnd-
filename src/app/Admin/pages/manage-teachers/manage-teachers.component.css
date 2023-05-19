@@ -49,3 +49,14 @@
   color: #ff0707;
   margin: 0rem 0rem 0rem 0.5rem;
 }
+
+/* modal */
+.main .modal .btn-btn {
+  background: #012970;
+  color: #fff;
+  margin: 0rem 0.7rem;
+}
+.main .modal .btn-btn:hover {
+  background: #0345b8;
+  color: #fff;
+}
