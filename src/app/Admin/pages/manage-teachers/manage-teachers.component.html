@@ -3,4 +3,88 @@
   <div class="pagetitle">
     <h2>Manage Teachers</h2>
   </div>
+
+  <!-- Button trigger modal -->
+  <div class="btn-teacher">
+    <button
+      type="button"
+      class="btn btn-btn"
+      data-bs-toggle="modal"
+      data-bs-target="#addteacher"
+    >
+      Add Teacher
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="addteacher"
+    tabindex="-1"
+    aria-labelledby="teacherModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="teacherModalLabel">
+            Add a Teacher Here...
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">...</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="display">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Number</th>
+              <th scope="col">DOB</th>
+              <th scope="col">Location</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>John kofi Owusu</td>
+              <td>john@gmail.com</td>
+              <td>0243425687</td>
+              <td>27th/06/2023</td>
+              <td>Location</td>
+              <td>
+                <i class="bi bi-pencil-square"></i>
+                <i class="bi bi-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>John kofi Owusu</td>
+              <td>john@gmail.com</td>
+              <td>0243425687</td>
+              <td>27th/06/2023</td>
+              <td>Location</td>
+              <td>
+                <i class="bi bi-pencil-square"></i>
+                <i class="bi bi-trash"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 </main>
