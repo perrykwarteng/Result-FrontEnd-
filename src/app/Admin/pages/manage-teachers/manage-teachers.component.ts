@@ -12,9 +12,10 @@ export class ManageTeachersComponent implements OnInit {
   constructor(private service: TeacherService) {}
 
   ngOnInit(): void {
-    this.service.getTeachers().subscribe((data: Teacher) => {
-      this.data = data;
-      console.log(data);
-    });
+    // this.service.getTeachers().subscribe((data: Teacher) => {
+    //   this.data = data;
+    //   console.log(data);
+    // });
+    
   }
 }

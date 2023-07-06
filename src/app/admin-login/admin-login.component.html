@@ -18,7 +18,7 @@
                   <img class="schlogo" src="../../assets/schlogo.jpeg" alt="" />
                 </div>
                 <div class="pt-4 pb-2">
-                  <h5 class="card-title text-center pb-0 fs-4">Admin Login</h5>
+                  <h5 class="card-title text-center pb-0 fs-4">Login Here</h5>
                 </div>
 
                 <form
@@ -27,9 +27,7 @@
                   (ngSubmit)="onSubmit()"
                 >
                   <div class="col-12">
-                    <label for="yourUsername" class="form-label"
-                      >Username</label
-                    >
+                    <label for="a_index" class="form-label">Index No</label>
                     <div class="input-group">
                       <span class="input-group-text" id="inputGroupPrepend"
                         >@</span
@@ -37,8 +35,8 @@
                       <input
                         type="text"
                         class="form-control"
-                        formControlName="adminUser"
-                        id="yourUsername"
+                        formControlName="index_number"
+                        id="a_index"
                         required
                       />
                     </div>
@@ -51,18 +49,16 @@
                     class="alert alert-danger"
                     role="alert"
                   >
-                    Please enter your username.
+                    Please enter your Index Number.
                   </div>
 
                   <div class="col-12">
-                    <label for="yourPassword" class="form-label"
-                      >Password</label
-                    >
+                    <label for="password" class="form-label">Password</label>
                     <input
                       type="password"
                       class="form-control"
-                      formControlName="adminPass"
-                      id="yourPassword"
+                      formControlName="password"
+                      id="password"
                       required
                     />
                   </div>

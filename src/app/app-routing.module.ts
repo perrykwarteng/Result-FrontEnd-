@@ -8,36 +8,42 @@ import { ManageSubjectsComponent } from './Admin/pages/manage-subjects/manage-su
 import { ResultsComponent } from './Admin/pages/results/results.component';
 import { ErrorComponent } from './error/error.component';
 import { SettingsComponent } from './Admin/pages/settings/settings.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  {
-    path: 'admin',
-    component: AdminDashboardComponent,
-  },
   {
     path: '',
     component: AdminLoginComponent,
   },
   {
-    path: 'manageTeachers',
-    component: ManageTeachersComponent,
+    path: 'admin',
+    component: AdminDashboardComponent,
+    children: [
+      {
+        path: 'manageTeachers',
+        component: ManageTeachersComponent,
+      },
+      {
+        path: 'manageStudents',
+        component: ManageStudentsComponent,
+      },
+      {
+        path: 'manageSubjects',
+        component: ManageSubjectsComponent,
+      },
+      {
+        path: 'results',
+        component: ResultsComponent,
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent,
+      },
+    ],
+    canActivate: [AuthGuard],
   },
-  {
-    path: 'manageStudents',
-    component: ManageStudentsComponent,
-  },
-  {
-    path: 'manageSubjects',
-    component: ManageSubjectsComponent,
-  },
-  {
-    path: 'results',
-    component: ResultsComponent,
-  },
-  {
-    path: 'settings',
-    component: SettingsComponent,
-  },
+
+  // 404 Error
   {
     path: '**',
     component: ErrorComponent,

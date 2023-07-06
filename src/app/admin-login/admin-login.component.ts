@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -7,15 +9,31 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./admin-login.component.css'],
 })
 export class AdminLoginComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
-
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private route: Router
+  ) {}
+  response: any;
   adminLogin = this.fb.group({
-    adminUser: ['', Validators.required],
-    adminPass: ['', Validators.required],
+    index_number: ['', Validators.required],
+    password: ['', Validators.required],
   });
 
   ngOnInit(): void {}
   onSubmit() {
-    console.log(this.adminLogin.value);
+    if (this.adminLogin.valid) {
+      this.authService.login(this.adminLogin.value).subscribe((res) => {
+        if (res != null) {
+          this.response = res;
+          if (this.response.admin.role == 'superAdmin') {
+            localStorage.setItem('token', this.response.token);
+            this.route.navigate(['/admin']);
+          } else {
+            console.log('Error Cred');
+          }
+        }
+      });
+    }
   }
 }
