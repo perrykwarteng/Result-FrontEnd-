@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
@@ -19,6 +19,7 @@ export class AdminLoginComponent implements OnInit {
     index_number: ['', Validators.required],
     password: ['', Validators.required],
   });
+
 
   ngOnInit(): void {}
   onSubmit() {

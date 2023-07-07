@@ -9,8 +9,13 @@ import { ResultsComponent } from './Admin/pages/results/results.component';
 import { ErrorComponent } from './error/error.component';
 import { SettingsComponent } from './Admin/pages/settings/settings.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
+  {
+    path: 'home',
+    component: AppComponent,
+  },
   {
     path: '',
     component: AdminLoginComponent,

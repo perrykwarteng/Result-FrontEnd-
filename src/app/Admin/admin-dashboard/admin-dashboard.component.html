@@ -78,8 +78,8 @@
       </a>
     </li>
 
-    <li class="nav-item">
-      <a routerLink="/settings" class="nav-link collapsed">
+    <li class="nav-item" (click)="logout()">
+      <a class="nav-link collapsed">
         <i class="bi bi-box-arrow-left"></i>
         <span>Logout</span>
       </a>
@@ -99,7 +99,7 @@
         <div class="card greet-card">
           <div class="card-body">
             <div class="card-title">
-              <h5>Hi John Owusu</h5>
+              <h5>Hi John</h5>
               <p>Ready to start your day with some decks?</p>
             </div>
             <div class="card-image">

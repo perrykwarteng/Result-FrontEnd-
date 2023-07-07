@@ -12,4 +12,8 @@ export class TeacherService {
   // getTeachers() {
   //   // return this.http.get<Teacher>(this.api);
   // }
+
+  getAllAdmin() {
+    return this.http.get('http://127.0.0.1:8000/api/allSuperAdmin');
+  }
 }
