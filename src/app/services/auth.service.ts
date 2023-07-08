@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
   url = 'http://127.0.0.1:8000/api/auth';
   // logoutUrl = '127.0.0.1:8000/api/logout';
-  constructor(private http: HttpClient, private routes:Router) {}
+  constructor(private http: HttpClient, private routes: Router) {}
 
   login(data): Observable<any> {
     return this.http.post(this.url, data);

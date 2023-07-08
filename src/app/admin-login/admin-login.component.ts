@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
@@ -20,7 +20,7 @@ export class AdminLoginComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-
+  @Output() details: EventEmitter<any> = new EventEmitter();
   ngOnInit(): void {}
   onSubmit() {
     if (this.adminLogin.valid) {

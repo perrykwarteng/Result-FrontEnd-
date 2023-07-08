@@ -23,29 +23,27 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminDashboardComponent,
-    children: [
-      {
-        path: 'manageTeachers',
-        component: ManageTeachersComponent,
-      },
-      {
-        path: 'manageStudents',
-        component: ManageStudentsComponent,
-      },
-      {
-        path: 'manageSubjects',
-        component: ManageSubjectsComponent,
-      },
-      {
-        path: 'results',
-        component: ResultsComponent,
-      },
-      {
-        path: 'settings',
-        component: SettingsComponent,
-      },
-    ],
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'manageTeachers',
+    component: ManageTeachersComponent,
+  },
+  {
+    path: 'manageStudents',
+    component: ManageStudentsComponent,
+  },
+  {
+    path: 'manageSubjects',
+    component: ManageSubjectsComponent,
+  },
+  {
+    path: 'results',
+    component: ResultsComponent,
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent,
   },
 
   // 404 Error
