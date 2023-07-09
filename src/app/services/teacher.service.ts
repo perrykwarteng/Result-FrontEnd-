@@ -6,14 +6,10 @@ import { Teacher } from '../interfaces/teacher';
   providedIn: 'root',
 })
 export class TeacherService {
-  api: any = 'http://127.0.0.1:8000/api/teacher';
+  api: any = 'http://127.0.0.1:8000/api/allTeachers';
   constructor(private http: HttpClient) {}
 
-  // getTeachers() {
-  //   // return this.http.get<Teacher>(this.api);
-  // }
-
-  getAllAdmin() {
-    return this.http.get('http://127.0.0.1:8000/api/allSuperAdmin');
+  getTeachers() {
+    return this.http.get<Teacher>(this.api);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
@@ -19,19 +19,17 @@ export class AdminLoginComponent implements OnInit {
     index_number: ['', Validators.required],
     password: ['', Validators.required],
   });
-
-  @Output() details: EventEmitter<any> = new EventEmitter();
   ngOnInit(): void {}
   onSubmit() {
     if (this.adminLogin.valid) {
       this.authService.login(this.adminLogin.value).subscribe((res) => {
         if (res != null) {
-          this.response = res;
-          if (this.response.admin.role == 'superAdmin') {
-            localStorage.setItem('token', this.response.token);
+          console.log(res);
+          if (res.admin.role == 'superAdmin') {
+            localStorage.setItem('token', res.token);
             this.route.navigate(['/admin']);
           } else {
-            console.log('Error Cred');
+            console.log('error');
           }
         }
       });

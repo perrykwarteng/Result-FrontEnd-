@@ -15,6 +15,12 @@ import { ResultsComponent } from './Admin/pages/results/results.component';
 import { SettingsComponent } from './Admin/pages/settings/settings.component';
 import { ErrorComponent } from './error/error.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
+import { DashboardComponent } from './Teachers/ClassTeacher/dashboard/dashboard.component';
+import { ManageClassComponent } from './Teachers/ClassTeacher/pages/manage-class/manage-class.component';
+import { AddRemarksComponent } from './Teachers/ClassTeacher/pages/add-remarks/add-remarks.component';
+import { AddReslutsComponent } from './Teachers/SubjectTeacher/pages/add-resluts/add-resluts.component';
+import { TeacherDashboardComponent } from './Teachers/SubjectTeacher/teacher-dashboard/teacher-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,12 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     ResultsComponent,
     SettingsComponent,
     ErrorComponent,
+    TeacherLoginComponent,
+    DashboardComponent,
+    ManageClassComponent,
+    AddRemarksComponent,
+    AddReslutsComponent,
+    TeacherDashboardComponent,
   ],
   imports: [
     BrowserModule,

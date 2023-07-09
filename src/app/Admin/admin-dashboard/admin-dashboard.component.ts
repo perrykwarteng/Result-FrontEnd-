@@ -21,12 +21,7 @@ export class AdminDashboardComponent {
     private service: TeacherService,
     private auth: AuthService,
     private routes: Router
-  ) {
-    this.service.getAllAdmin().subscribe((res) => {
-      console.log(res);
-      this.res = res;
-    });
-  }
+  ) {}
 
   logout() {
     this.auth.logout();

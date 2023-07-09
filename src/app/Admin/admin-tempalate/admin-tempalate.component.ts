@@ -16,12 +16,4 @@ export class AdminTempalateComponent {
   res: any;
   name: any;
   constructor(private service: TeacherService) {}
-
-  getallAd() {
-    return this.service.getAllAdmin().subscribe((res) => {
-      console.log(res);
-      this.res = res;
-      this.name = this.res.admin.first_name;
-    });
-  }
 }

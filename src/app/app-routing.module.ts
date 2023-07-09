@@ -10,15 +10,22 @@ import { ErrorComponent } from './error/error.component';
 import { SettingsComponent } from './Admin/pages/settings/settings.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AppComponent } from './app.component';
+import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
+import { TeacherDashboardComponent } from './Teachers/SubjectTeacher/teacher-dashboard/teacher-dashboard.component';
+import { AddReslutsComponent } from './Teachers/SubjectTeacher/pages/add-resluts/add-resluts.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: AppComponent,
   },
   {
-    path: '',
+    path: 'login',
     component: AdminLoginComponent,
+  },
+  {
+    path: 'teacherLogin',
+    component: TeacherLoginComponent,
   },
   {
     path: 'admin',
@@ -28,22 +35,37 @@ const routes: Routes = [
   {
     path: 'manageTeachers',
     component: ManageTeachersComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'manageStudents',
     component: ManageStudentsComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'manageSubjects',
     component: ManageSubjectsComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'results',
     component: ResultsComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'settings',
     component: SettingsComponent,
+    canActivate: [AuthGuard],
+  },
+
+  // Subject Teacher Routes
+  {
+    path: 'subjectTeacher',
+    component: TeacherDashboardComponent,
+  },
+  {
+    path: 'addResults',
+    component: AddReslutsComponent,
   },
 
   // 404 Error

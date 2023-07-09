@@ -19,16 +19,26 @@
 
 /* teacher modal */
 .main .btn-teacher {
-  position: relative;
-  left: 80%;
+  display: flex;
   margin: 2rem 0rem 1rem 0rem;
 }
 .main .btn-teacher .btn-btn {
   background: #012970;
   color: #fff;
+  margin: 0 1rem 0 0;
 }
 .main .btn-teacher .btn-btn:hover {
-  background: #0345b8;
+  background: #1472ff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.main .btn-teacher .btn-two {
+  background: #1472ff;
+  color: #fff;
+  margin: 0 1rem 0 0;
+}
+.main .btn-teacher .btn-two:hover {
+  background: #012970;
   color: #fff;
   transition: all 0.3s ease;
 }

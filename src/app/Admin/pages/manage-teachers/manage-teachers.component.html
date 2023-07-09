@@ -14,6 +14,7 @@
     >
       Add Teacher
     </button>
+    <button type="button" class="btn btn-two">Assign Teacher</button>
   </div>
 
   <!-- Modal -->
@@ -119,7 +120,7 @@
   <section class="display">
     <div class="card">
       <div class="card-body">
-        <table class="table table-striped">
+        <table id="myTable" class="table table-striped">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -127,7 +128,6 @@
               <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Number</th>
-              <th scope="col">DOB</th>
               <th scope="col">Location</th>
               <th scope="col">Action</th>
             </tr>
@@ -135,13 +135,18 @@
           <tbody>
             <tr *ngFor="let datas of data; let i = index">
               <th scope="row">{{ i }}</th>
-              <td>{{ datas.t_index }}</td>
+              <td>{{ datas.teacherIndex }}</td>
               <td>
-                {{ datas.first_name + datas.other_name + datas.last_name }}
+                {{
+                  datas.first_name +
+                    " " +
+                    datas.other_name +
+                    " " +
+                    datas.last_name
+                }}
               </td>
               <td>{{ datas.email }}</td>
               <td>{{ datas.number }}</td>
-              <td>{{ datas.data | date }}</td>
               <td>{{ datas.location }}</td>
               <td>
                 <i class="bi bi-pencil-square"></i>
