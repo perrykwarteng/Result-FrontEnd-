@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Teacher } from 'src/app/interfaces/teacher';
-import { TeacherService } from 'src/app/services/teacher.service';
+import { StudentService } from 'src/app/services/student.service';
 
 @Component({
   selector: 'app-manage-students',
@@ -8,13 +7,12 @@ import { TeacherService } from 'src/app/services/teacher.service';
   styleUrls: ['./manage-students.component.css'],
 })
 export class ManageStudentsComponent {
-  data;
-  constructor(private service: TeacherService) {}
+  res;
+  constructor(private service: StudentService) {}
 
   ngOnInit(): void {
-    // this.service.getTeachers().subscribe((data: Teacher) => {
-    //   this.data = data;
-    //   console.log(data);
-    // });
+    this.service.getAllStudents().subscribe((res) => {
+      this.res = res;
+    });
   }
 }

@@ -13,13 +13,12 @@
   .main {
     width: 75%;
     margin: 4rem 1rem;
-    left: 23%;
   }
 }
 /* teacher modal */
 .main .btn-teacher {
   position: relative;
-  left: 80%;
+
   margin: 2rem 0rem 1rem 0rem;
 }
 .main .btn-teacher .btn-btn {

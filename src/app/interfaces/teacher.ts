@@ -6,6 +6,5 @@ export interface Teacher {
   last_name: string;
   email: string;
   number: number;
-  dob: any;
   location: string;
 }

@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { TeacherDashboardComponent } from './Teachers/SubjectTeacher/teacher-dashboard/teacher-dashboard.component';
 import { AddReslutsComponent } from './Teachers/SubjectTeacher/pages/add-resluts/add-resluts.component';
+import { ManageClassesComponent } from './Admin/pages/manage-classes/manage-classes.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
     component: AppComponent,
   },
   {
-    path: 'login',
+    path: 'adminLogin',
     component: AdminLoginComponent,
   },
   {
@@ -46,6 +47,11 @@ const routes: Routes = [
     path: 'manageSubjects',
     component: ManageSubjectsComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'manageClass',
+    component: ManageClassesComponent,
+    // canActivate: [AuthGuard],
   },
   {
     path: 'results',

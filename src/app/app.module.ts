@@ -21,6 +21,7 @@ import { ManageClassComponent } from './Teachers/ClassTeacher/pages/manage-class
 import { AddRemarksComponent } from './Teachers/ClassTeacher/pages/add-remarks/add-remarks.component';
 import { AddReslutsComponent } from './Teachers/SubjectTeacher/pages/add-resluts/add-resluts.component';
 import { TeacherDashboardComponent } from './Teachers/SubjectTeacher/teacher-dashboard/teacher-dashboard.component';
+import { ManageClassesComponent } from './Admin/pages/manage-classes/manage-classes.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { TeacherDashboardComponent } from './Teachers/SubjectTeacher/teacher-das
     AddRemarksComponent,
     AddReslutsComponent,
     TeacherDashboardComponent,
+    ManageClassesComponent,
   ],
   imports: [
     BrowserModule,

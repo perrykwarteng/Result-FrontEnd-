@@ -1,19 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Teacher } from '../interfaces/teacher';
 
 @Injectable({
   providedIn: 'root',
 })
-export class TeacherService {
-  getAllUrl: any = 'http://127.0.0.1:8000/api/allTeachers';
+export class SubjectService {
+  constructor(private http: HttpClient) {}
+  getAllUrl: any = 'http://127.0.0.1:8000/api/allSubject';
   createUrl: string = '';
   upDateUrl: string = '';
   deleteUrl: string = '';
-  constructor(private http: HttpClient) {}
-
-  getTeachers() {
-    return this.http.get<Teacher>(this.getAllUrl);
+  getSibjects() {
+    return this.http.get(this.getAllUrl);
   }
 
   createTeacher() {}
