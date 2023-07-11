@@ -22,6 +22,7 @@ import { AddRemarksComponent } from './Teachers/ClassTeacher/pages/add-remarks/a
 import { AddReslutsComponent } from './Teachers/SubjectTeacher/pages/add-resluts/add-resluts.component';
 import { TeacherDashboardComponent } from './Teachers/SubjectTeacher/teacher-dashboard/teacher-dashboard.component';
 import { ManageClassesComponent } from './Admin/pages/manage-classes/manage-classes.component';
+import { ResultSlipComponent } from './result-slip/result-slip.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ManageClassesComponent } from './Admin/pages/manage-classes/manage-clas
     AddReslutsComponent,
     TeacherDashboardComponent,
     ManageClassesComponent,
+    ResultSlipComponent,
   ],
   imports: [
     BrowserModule,
