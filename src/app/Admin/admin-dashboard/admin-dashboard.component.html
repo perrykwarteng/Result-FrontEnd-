@@ -22,7 +22,7 @@
   </div>
 
   <div class="profile">
-    <h3>Welcome  {{adminUser.superAdmin.first_name}}</h3>
+    <h3>Welcome {{ adminUser.superAdmin.first_name }}</h3>
   </div>
 </header>
 
@@ -44,7 +44,7 @@
     </li>
 
     <li class="nav-item">
-      <a [routerLink]="['/manageStudents', 2]" class="nav-link collapsed">
+      <a [routerLink]="['/manageStudents']" class="nav-link collapsed">
         <i class="bi bi-person-circle"></i>
         <span>Manage Students</span>
       </a>
@@ -54,6 +54,13 @@
       <a routerLink="/manageSubjects" class="nav-link collapsed">
         <i class="bi bi-journals"></i>
         <span>Manage Subjects</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="/manageClass" class="nav-link collapsed">
+        <i class="bi bi-house-add"></i>
+        <span>Manage Class</span>
       </a>
     </li>
 
@@ -102,7 +109,8 @@
               <h5>
                 Hi
                 {{
-                  adminUser.superAdmin.first_name + ' ' +
+                  adminUser.superAdmin.first_name +
+                    " " +
                     adminUser.superAdmin.last_name
                 }}
               </h5>

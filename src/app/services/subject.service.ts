@@ -7,14 +7,16 @@ import { Injectable } from '@angular/core';
 export class SubjectService {
   constructor(private http: HttpClient) {}
   getAllUrl: any = 'http://127.0.0.1:8000/api/allSubject';
-  createUrl: string = '';
+  createUrl: string = 'http://127.0.0.1:8000/api/createSubject';
   upDateUrl: string = '';
   deleteUrl: string = '';
   getSibjects() {
     return this.http.get(this.getAllUrl);
   }
 
-  createTeacher() {}
+  createSubject(data) {
+    return this.http.post(this.createUrl, data);
+  }
 
   updateTeacher() {}
 

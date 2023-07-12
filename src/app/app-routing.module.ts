@@ -14,6 +14,10 @@ import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { TeacherDashboardComponent } from './Teachers/SubjectTeacher/teacher-dashboard/teacher-dashboard.component';
 import { AddReslutsComponent } from './Teachers/SubjectTeacher/pages/add-resluts/add-resluts.component';
 import { ManageClassesComponent } from './Admin/pages/manage-classes/manage-classes.component';
+import { ClassTeacherComponent } from './Teachers/class-teacher/class-teacher.component';
+import { AddRemarksComponent } from './Teachers/page/add-remarks/add-remarks.component';
+import { ClassStudentComponent } from './Teachers/page/class-student/class-student.component';
+import { BothTeachersComponent } from './Teachers/both-teachers/both-teachers.component';
 
 const routes: Routes = [
   {
@@ -68,13 +72,38 @@ const routes: Routes = [
   {
     path: 'subjectTeacher',
     component: TeacherDashboardComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'addResults',
     component: AddReslutsComponent,
+    canActivate: [AuthGuard],
   },
 
   // Class Teacher
+  {
+    path: 'classTeacher',
+    component: ClassTeacherComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'addRemarks',
+    component: AddRemarksComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'classStudents',
+    component: ClassStudentComponent,
+    canActivate: [AuthGuard],
+  },
+
+  // both Teachers
+
+  {
+    path: 'bothTeachers',
+    component: BothTeachersComponent,
+    canActivate: [AuthGuard],
+  },
 
   // 404 Error
   {

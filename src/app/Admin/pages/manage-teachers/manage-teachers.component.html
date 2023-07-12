@@ -14,10 +14,17 @@
     >
       Add Teacher
     </button>
-    <button type="button" class="btn btn-two">Assign Teacher</button>
+    <button
+      type="button"
+      class="btn btn-two"
+      data-bs-toggle="modal"
+      data-bs-target="#assignteacher"
+    >
+      Assign Teacher
+    </button>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal for Create Teacher -->
   <div
     class="modal fade"
     id="addteacher"
@@ -40,13 +47,18 @@
         </div>
         <div class="modal-body">
           <!-- Forms -->
-          <form class="row g-3">
+          <form
+            [formGroup]="createAdmin"
+            (ngSubmit)="onSubmit()"
+            class="row g-3"
+          >
             <!-- first name -->
             <div class="col-md-12">
               <label for="f_name" class="form-label">First Name</label>
               <input
                 type="text"
                 class="form-control"
+                formControlName="first_name"
                 id="f_name"
                 placeholder="eg; john"
               />
@@ -57,6 +69,7 @@
               <input
                 type="text"
                 class="form-control"
+                formControlName="other_name"
                 id="o_name"
                 placeholder="eg; kofi"
               />
@@ -67,44 +80,148 @@
               <input
                 type="text"
                 class="form-control"
+                formControlName="last_name"
                 id="l_name"
                 placeholder="eg;owusu"
               />
             </div>
             <!-- email -->
-            <div class="col-md-6">
+            <div class="col-md-12">
               <label for="email" class="form-label">Email</label>
               <input
                 type="email"
                 class="form-control"
+                formControlName="email"
                 id="email"
                 placeholder="eg; ama@gmail.com"
               />
             </div>
+
+            <!-- isSubjectTeacher -->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                formControlName="asSubjectTeacher"
+                value="1"
+                id="asSubjectTeacher"
+              />
+              <label class="form-check-label" for="isSubjectTeacher">
+                Check if Subject Teacher
+              </label>
+            </div>
+
+            <!-- isClassTeacher -->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                formControlName="asClassTeacher"
+                value="1"
+                id="asClassTeacher"
+              />
+              <label class="form-check-label" for="isClassTeacher">
+                Check if Class Teacher
+              </label>
+            </div>
+
             <!-- Phone number -->
             <div class="col-md-6">
               <label for="number" class="form-label">Phone Number</label>
               <input
                 type="text"
                 class="form-control"
+                formControlName="number"
                 id="number"
                 placeholder="eg; 0248762345"
               />
             </div>
-            <!-- date -->
-            <div class="col-12">
-              <label for="dob" class="form-label">DOB</label>
-              <input type="date" class="form-control" id="dob" />
-            </div>
+
             <!-- location -->
             <div class="col-12">
               <label for="location" class="form-label">Location</label>
               <input
                 type="text"
                 class="form-control"
+                formControlName="location"
                 id="location"
                 placeholder="Apartment, studio, or floor"
               />
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-btn">Add</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Create Teacher -->
+  <div
+    class="modal fade"
+    id="assignteacher"
+    tabindex="-1"
+    aria-labelledby="teacherModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="teacherModalLabel">
+            Assign Teacher to a Class
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <!-- Forms -->
+          <form
+            [formGroup]="teachera"
+            (ngSubmit)="assignClass()"
+            class="row g-3"
+          >
+            <!-- first name -->
+            <div class="col-md-12">
+              <label for="f_name" class="form-label">Assign Teacher</label>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                formControlName="teacher"
+              >
+                <option selected>Select Teacher</option>
+                <option
+                  *ngFor="let teacher of data"
+                  value="{{ teacher.teacherIndex }}"
+                >
+                  {{
+                    teacher.first_name + teacher.other_name + teacher.last_name
+                  }}
+                </option>
+              </select>
+            </div>
+            <!-- other name -->
+            <div class="col-md-12">
+              <label for="teacher" class="form-label">Assign Class</label>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                formControlName="class"
+              >
+                <option selected>Select Class</option>
+                <option
+                  *ngFor="let class of classe"
+                  value="{{ class.classCode }}"
+                >
+                  {{ class.className }}
+                </option>
+              </select>
             </div>
 
             <div class="text-center">

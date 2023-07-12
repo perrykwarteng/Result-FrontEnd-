@@ -14,7 +14,9 @@ export class StudentService {
     return this.http.get(this.getallUrl);
   }
 
-  createStudent() {}
+  createStudent(data) {
+    return this.http.post(this.createUrl, data);
+  }
 
   updateStudent() {}
 

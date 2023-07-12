@@ -28,19 +28,19 @@ export class TeacherLoginComponent {
             res.teacher.asClassTeacher == 0
           ) {
             localStorage.setItem('token', res.token);
-            this.route.navigate(['/admin']);
+            this.route.navigate(['/subjectTeacher']);
           } else if (
             res.teacher.asClassTeacher == 1 &&
             res.teacher.asSubjectTeacher == 0
           ) {
             localStorage.setItem('token', res.token);
-            this.route.navigate(['/admin']);
+            this.route.navigate(['/classTeacher']);
           } else if (
             res.teacher.asClassTeacher == 1 &&
             res.teacher.asSubjectTeacher == 1
           ) {
             localStorage.setItem('token', res.token);
-            this.route.navigate(['/admin']);
+            this.route.navigate(['/bothTeachers']);
           }
         } else {
           console.log('error');

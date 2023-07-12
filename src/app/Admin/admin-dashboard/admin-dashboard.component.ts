@@ -14,7 +14,7 @@ export class AdminDashboardComponent implements OnInit {
   toggle() {
     this.isDispaly = !this.isDispaly;
   }
-
+  
   adminUser;
   constructor(private admin: AdminService, private auth: AuthService) {}
 

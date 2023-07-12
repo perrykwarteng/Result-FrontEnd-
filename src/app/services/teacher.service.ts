@@ -7,7 +7,7 @@ import { Teacher } from '../interfaces/teacher';
 })
 export class TeacherService {
   getAllUrl: any = 'http://127.0.0.1:8000/api/allTeachers';
-  createUrl: string = '';
+  createUrl: string = 'http://127.0.0.1:8000/api/createTeachers';
   upDateUrl: string = '';
   deleteUrl: string = '';
   constructor(private http: HttpClient) {}
@@ -16,7 +16,9 @@ export class TeacherService {
     return this.http.get<Teacher>(this.getAllUrl);
   }
 
-  createTeacher() {}
+  createTeacher(data) {
+    return this.http.post(this.createUrl, data);
+  }
 
   updateTeacher() {}
 

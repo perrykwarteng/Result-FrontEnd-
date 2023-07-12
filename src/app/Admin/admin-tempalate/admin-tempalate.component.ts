@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AdminService } from 'src/app/services/admin.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { TeacherService } from 'src/app/services/teacher.service';
 
 @Component({
@@ -13,7 +15,16 @@ export class AdminTempalateComponent {
   //   this.isDispaly = !this.isDispaly;
   // }
 
-  res: any;
-  name: any;
-  constructor(private service: TeacherService) {}
+  adminUser;
+  constructor(private admin: AdminService, private auth: AuthService) {}
+
+  ngOnInit(): void {
+    this.admin.getCurrentAdmin().subscribe((res) => {
+      this.adminUser = res;
+    });
+  }
+
+  logout() {
+    this.auth.logout();
+  }
 }

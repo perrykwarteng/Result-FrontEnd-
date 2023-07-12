@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { SubjectService } from 'src/app/services/subject.service';
 
 @Component({
@@ -8,12 +9,27 @@ import { SubjectService } from 'src/app/services/subject.service';
 })
 export class ManageSubjectsComponent implements OnInit {
   res;
-  constructor(private service: SubjectService) {}
+  constructor(private service: SubjectService, private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.service.getSibjects().subscribe((res) => {
       this.res = res;
       console.log(res);
     });
+  }
+
+  subjectForm = this.fb.group({
+    subjectCode: ['', Validators.required],
+    subjectName: ['', Validators.required],
+  });
+
+  createSubject() {
+    if (this.subjectForm.valid) {
+      this.service.createSubject(this.subjectForm.value).subscribe((res) => {
+        console.log('successful');
+      });
+    } else {
+      console.log('Bad Entery');
+    }
   }
 }
