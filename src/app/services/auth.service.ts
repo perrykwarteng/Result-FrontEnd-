@@ -11,6 +11,9 @@ export class AuthService {
   // logoutUrl = '127.0.0.1:8000/api/logout';
   constructor(private http: HttpClient, private routes: Router) {}
 
+
+
+  
   login(data): Observable<any> {
     return this.http.post(this.url, data);
   }
@@ -18,6 +21,8 @@ export class AuthService {
   isLoggin() {
     return localStorage.getItem('token') != null;
   }
+
+  
 
   getToken() {
     return localStorage.getItem('token');

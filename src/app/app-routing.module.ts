@@ -51,7 +51,7 @@ const routes: Routes = [
   {
     path: 'manageClass',
     component: ManageClassesComponent,
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: 'results',
@@ -73,6 +73,8 @@ const routes: Routes = [
     path: 'addResults',
     component: AddReslutsComponent,
   },
+
+  // Class Teacher
 
   // 404 Error
   {

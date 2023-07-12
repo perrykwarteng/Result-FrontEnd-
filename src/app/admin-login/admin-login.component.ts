@@ -36,3 +36,6 @@ export class AdminLoginComponent implements OnInit {
     }
   }
 }
+function send() {
+  throw new Error('Function not implemented.');
+}
