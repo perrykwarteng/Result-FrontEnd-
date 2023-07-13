@@ -18,6 +18,7 @@ import { ClassTeacherComponent } from './Teachers/class-teacher/class-teacher.co
 import { AddRemarksComponent } from './Teachers/page/add-remarks/add-remarks.component';
 import { ClassStudentComponent } from './Teachers/page/class-student/class-student.component';
 import { BothTeachersComponent } from './Teachers/both-teachers/both-teachers.component';
+import { ResultSlipComponent } from './result-slip/result-slip.component';
 
 const routes: Routes = [
   {
@@ -103,6 +104,12 @@ const routes: Routes = [
     path: 'bothTeachers',
     component: BothTeachersComponent,
     canActivate: [AuthGuard],
+  },
+
+  // Result Slip
+  {
+    path: 'resultSlip',
+    component: ResultSlipComponent,
   },
 
   // 404 Error

@@ -1,0 +1,48 @@
+.card .card-body .result-details {
+  display: flex;
+  flex-direction: column;
+}
+.result-details .first,
+.result-details .second {
+  display: flex;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+.result-details .first .index,
+.result-details .first .student,
+.result-details .first .roll,
+.result-details .first .class,
+.result-details .first .year {
+  margin: 0 2rem 0 0;
+}
+
+.result-details .second .date,
+.result-details .second .next-term-begins,
+.result-details .second .position {
+  margin: 0 3rem 0 0;
+}
+
+.grade-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.table-two {
+  text-align: center;
+}
+.remarks {
+  margin-top: 2rem;
+}
+.remarks .attend {
+  display: flex;
+}
+hr {
+  width: 15rem;
+}
+.sign,
+.sign-date {
+  display: flex;
+  justify-content: space-between;
+}
