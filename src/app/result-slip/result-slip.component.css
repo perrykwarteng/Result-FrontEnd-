@@ -1,3 +1,9 @@
+.report-card {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
 .card .card-body .result-details {
   display: flex;
   flex-direction: column;
@@ -5,6 +11,10 @@
 .result-details .first,
 .result-details .second {
   display: flex;
+}
+
+.result-details {
+  margin: 2rem 0;
 }
 
 h3 {
@@ -38,11 +48,26 @@ h3 {
 .remarks .attend {
   display: flex;
 }
-hr {
+.sign-one hr,
+.sign-two hr {
   width: 15rem;
 }
 .sign,
 .sign-date {
   display: flex;
   justify-content: space-between;
+}
+.sch-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+.sch-detail img {
+  width: 7rem;
+}
+
+.sch-detail h2 {
+  margin: 1rem 0 0 0;
+  font-size: 2rem;
 }

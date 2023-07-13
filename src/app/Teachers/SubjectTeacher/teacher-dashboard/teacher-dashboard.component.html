@@ -22,7 +22,7 @@
   </div>
 
   <div class="profile">
-    <h3>John welcome</h3>
+    <h3>welcome {{ data.teacher.first_name }}</h3>
   </div>
 </header>
 
@@ -50,19 +50,19 @@
         </a>
       </li> -->
 
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a routerLink="/settings" class="nav-link collapsed">
         <i class="bi bi-gear"></i>
         <span>Settings</span>
       </a>
-    </li>
+    </li> -->
 
-    <!-- <li class="nav-item" (click)="logout()">
-        <a class="nav-link collapsed">
-          <i class="bi bi-box-arrow-left"></i>
-          <span>Logout</span>
-        </a>
-      </li> -->
+    <li class="nav-item" (click)="logout()">
+      <a class="nav-link collapsed">
+        <i class="bi bi-box-arrow-left"></i>
+        <span>Logout</span>
+      </a>
+    </li>
   </ul>
 </aside>
 
@@ -78,11 +78,11 @@
         <div class="card greet-card">
           <div class="card-body">
             <div class="card-title">
-              <h5>Hi John</h5>
+              <h5>Hi {{ data.teacher.first_name }}</h5>
               <p>Ready to start your day with some decks?</p>
             </div>
             <div class="card-image">
-              <!-- <img [src]="[greetImg]" /> -->
+              <img [src]="[greetImg]" />
             </div>
           </div>
         </div>

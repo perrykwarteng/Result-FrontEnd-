@@ -73,12 +73,12 @@ const routes: Routes = [
   {
     path: 'subjectTeacher',
     component: TeacherDashboardComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: 'addResults',
     component: AddReslutsComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
 
   // Class Teacher
